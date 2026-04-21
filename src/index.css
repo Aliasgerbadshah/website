@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(135deg, #FF6769, #F430BD, #FF6769, #F430BD);
+  background-size: 300% 300%;
+  animation: gradientShift 5s ease infinite;
+}
+
+.animated-gradient-subtle {
+  background: linear-gradient(135deg, #fff0f5, #fce4f8, #fff0f5, #ffe4f0);
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* Animated gradient bg for highlighted elements */
+.animated-gradient-bg {
+  background: linear-gradient(135deg, #FF6769, #F430BD, #FF6769, #F430BD);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Moving gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #FF6769, #F430BD, #FF6769, #F430BD);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border glow */
+.gradient-border {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #FF6769, #F430BD);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+  z-index: -1;
+}
+
+/* Countdown box gradient bg */
+.countdown-box {
+  background: linear-gradient(135deg, #FF6769, #F430BD);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Glow button */
+.glow-btn {
+  background: linear-gradient(135deg, #FF6769, #F430BD, #FF6769);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  box-shadow: 0 4px 30px rgba(244, 48, 189, 0.45);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.glow-btn:hover {
+  box-shadow: 0 6px 40px rgba(244, 48, 189, 0.65);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(244, 48, 189, 0.15);
+}
+
+/* FAQ button */
+.faq-btn {
+  transition: background 0.2s ease;
+}
+
+/* Gradient icon bg */
+.icon-grad {
+  background: linear-gradient(135deg, #FF6769, #F430BD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section divider */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(90deg, #FF6769, #F430BD, #FF6769);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
